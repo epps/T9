@@ -14,5 +14,8 @@
     "lib",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular": "~1.4.7"
+  }
 }
