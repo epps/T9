@@ -5,7 +5,7 @@
   "authors": [
     "Erik Eppel <eceppel@gmail.com>"
   ],
-  "description": "An application that simulates texting on a standard 9-key keypad using a backtracking algorithm to create unique letter combinations.",
+  "description": "An application that simulates texting on a standard 10-key keypad using a backtracking algorithm to create unique letter combinations.",
   "license": "MIT",
   "ignore": [
     "**/.*",
