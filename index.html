@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="T9">
 <head>
   <meta charset="UTF-8">
   <title>T9</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Erik Eppel">
   <meta name="description" content="T9 is a simple AngularJS application that simulates texting on a standard 10-key keypad by using a backtracking algorithm to generate unique letter combinations.">
-
-  <script src="lib/angular/angular.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>T9</h1>
   
+  <main ng-controller="PhoneController as phone">
+    <section>
+      <table>
+        <tr>
+          <td>1</td>
+          <td key>2 <span>abc</span></td>
+          <td key>3 <span>def</span></td>
+        </tr>
+        <tr>
+          <td key>4 <span>ghi</span></td>
+          <td key>5 <span>jkl</span></td>
+          <td key>6 <span>mno</span></td>
+        </tr>
+        <tr>
+          <td key>7 <span>pqrs</span></td>
+          <td key>8 <span>tuv</span></td>
+          <td key>9 <span>wxyz</span></td>
+        </tr>
+      </table>
+    </section>
+  </main>
+  
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/phone.controller.js"></script>
+  <script src="js/key.directive.js"></script>
 </body>
 </html>
