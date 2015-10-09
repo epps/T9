@@ -1,5 +1,7 @@
 <section>
-  <span>{{ number }}</span>
+  <div id="screen">
+    <span id="letter-combo" ng-repeat="combo in letterCombos">{{ combo }}</span>
+  </div>
   <table>
     <tr ng-click="pressKey( $event )">
       <td>1</td>
@@ -15,6 +17,11 @@
       <td>7 pqrs</td>
       <td>8 tuv</td>
       <td>9 wxyz</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>0</td>
+      <td>#</td>
     </tr>
   </table>
 </section>
