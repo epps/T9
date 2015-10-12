@@ -1,0 +1,11 @@
+#screen {
+  display: block;
+  min-height: 2em;
+  max-height: 5em;
+  overflow: scroll;
+}
+
+#letter-combo {
+  display: inline-block;
+  margin: .5em;
+}

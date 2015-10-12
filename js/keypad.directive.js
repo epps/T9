@@ -10,12 +10,18 @@ angular.module( 'T9' )
   };
 }])
 
-.controller( 'KeyPadController', [ '$scope', function( $scope ) {
-  $scope.number = '';
+.controller( 'KeyPadController', [
+  '$scope',
+  'LetterCombinations',
+  function( $scope, LetterCombinations ) {
+    var number = '';
+    $scope.letterCombos;
 
-  $scope.pressKey = function ( $event ) {
-    console.log( $event.target.innerText[0] );
-    $scope.number += $event.target.innerText[0];
-  };
-
-}]);
+    $scope.pressKey = function ( $event ) {
+      if ( $event.target.innerText[0] === '1' ) { return; }
+      number += $event.target.innerText[0];
+      $scope.letterCombos = LetterCombinations.digitsToLetterCombinations( number );
+      console.log( $scope.letterCombos );
+    };
+  }
+]);
