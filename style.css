@@ -1,11 +1,61 @@
-#screen {
-  display: block;
-  min-height: 2em;
-  max-height: 5em;
-  overflow: scroll;
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+
+main {
+  text-align: center;
+  font-family: Helvetica, sans-serif;
 }
 
-#letter-combo {
+p {
+  font-size: .75em;
+  text-align: left;
+  width: 50em;
+  margin: 1em auto;
+}
+
+.phone {
+  background-color: #D6DBE8;
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20em;
+  margin: 0 auto;
+  padding: 1.5em;
+  width: 15em;
+}
+
+.screen {
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  display: block;
+  font-family: 'Dosis', sans-serif;
+  height: 15em;
+  width: 15em;
+  margin-bottom: .5em;
+  overflow-y: scroll;
+}
+
+.letter-combo {
   display: inline-block;
   margin: .5em;
+}
+
+table {
+  background-color: #EAEAEA;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: .25em;
+}
+
+td {
+  background-color: #FFFFFF;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: .5em;
+  text-align: center;
+}
+
+td:hover {
+  cursor: pointer;
 }
