@@ -19,9 +19,12 @@ angular.module( 'T9' )
 
     $scope.pressKey = function ( $event ) {
       if ( $event.target.innerText[0] === '1' ) { return; }
+      // number variable builds with each successive click event
       number += $event.target.innerText[0];
+      // digitsToLetterCombinations is called with each click event, i.e. as number grows
       $scope.letterCombos = LetterCombinations.digitsToLetterCombinations( number );
-      console.log( $scope.letterCombos );
+
+      console.log("The letter combinations for " + number + " are: " + $scope.letterCombos );
     };
   }
 ]);
