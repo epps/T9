@@ -1,6 +1,6 @@
 <section class="phone">
   <div class="screen">
-    <span class="letter-combo" ng-repeat="combo in letterCombos">{{ combo }}</span>
+    <span class="letter-combo" ng-repeat="combo in letterCombos track by $index">{{ combo }}</span>
   </div>
   <table>
     <tr ng-click="pressKey( $event )">

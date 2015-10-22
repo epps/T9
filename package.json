@@ -1,0 +1,22 @@
+{
+  "name": "t9",
+  "version": "1.0.0",
+  "description": "T9 is a simple AngularJS application that simulates texting on a standard 10-key keypad by using a backtracking algorithm to generate unique letter combinations.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epps/T9.git"
+  },
+  "author": "Erik Eppel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epps/T9/issues"
+  },
+  "homepage": "https://github.com/epps/T9#readme",
+  "dependencies": {
+    "word-list": "^1.0.0"
+  }
+}

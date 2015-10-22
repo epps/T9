@@ -1,7 +1,15 @@
 angular.module( 'T9' )
 // Create a factory to hold the business logic of the T9 app
-.factory( 'LetterCombinations', [ function() {
+.factory( 'LetterCombinations', [ '$http', function($http) {
   // Create a dictionary objects that maps digits to the letters associated with them
+  var realWords;
+  $http.get( '../node_modules/word-list/words.txt')
+    .then(function( response ){
+      realWords = response.data.split('\n');
+    }, function( response ){
+      console.log(response);
+    });
+
   var digitsToLetters = {
     '1': '',
     '2': 'abc',
@@ -15,6 +23,7 @@ angular.module( 'T9' )
   };
 
   function digitsToLetterCombinations( digitString ) {
+    // if ( digitString.length === 0 ) { }
     var words = [];
 
     // generateWordCombinations is a recursive subroutine that uses backtracking to generate
@@ -22,7 +31,10 @@ angular.module( 'T9' )
     var generateWordCombinations = function ( word, digits ) {
       // base case: a word has been generated when there aren't any more digits to operate on
       if ( digits.length === 0 ) {
-        words.push( word );
+        if ( realWords.indexOf(word) > -1 ) {
+          var idx = realWords.indexOf(word);
+          words.push( realWords[idx] );
+        }
         return;
       }
 
