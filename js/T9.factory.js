@@ -23,7 +23,7 @@ angular.module( 'T9' )
   };
 
   function digitsToLetterCombinations( digitString ) {
-    // if ( digitString.length === 0 ) { }
+    // initialize a storage array of complete words
     var words = [];
 
     // generateWordCombinations is a recursive subroutine that uses backtracking to generate
